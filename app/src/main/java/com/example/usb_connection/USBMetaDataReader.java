@@ -15,7 +15,6 @@ import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbDeviceConnection;
 import android.hardware.usb.UsbManager;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,11 +26,10 @@ import com.hoho.android.usbserial.driver.UsbSerialPort;
 import com.hoho.android.usbserial.driver.UsbSerialProber;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class USBMetaDataReader extends AppCompatActivity {
 
     private TextView textView;
     private EditText sendText;
@@ -81,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
+        /*
         textView.setText(
                 "Manufacturer name: "+ device.getManufacturerName() +"\n"+
                 "Device name: " + device.getDeviceName() + "\n"+
@@ -88,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
                         "Product name: "+ device.getProductName() + "\n"+
                         "Serial number: "+ device.getSerialNumber()
         );
+        */
+
 
         try {
             port.close();
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.textView);
+        //textView = findViewById(R.id.textView);
         sendButton = findViewById(R.id.send);
         sendText = findViewById(R.id.sendText);
 

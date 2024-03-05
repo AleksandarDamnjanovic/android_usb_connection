@@ -4,26 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="137dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="328dp"
-        android:layout_height="64dp"
-        android:text="Ready"
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="#aaaaaa"
+        android:text=""
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/sendText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <EditText
         android:id="@+id/sendText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="76dp"
         android:ems="10"
         android:inputType="text"
         android:text=""
@@ -42,6 +46,19 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sendText"
-        app:layout_constraintVertical_bias="0.141" />
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:background="#cccccc"
+        android:id="@+id/textView"
+        android:layout_width="102dp"
+        android:layout_height="26dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/sendText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineChart"
+        app:layout_constraintVertical_bias="0.083" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

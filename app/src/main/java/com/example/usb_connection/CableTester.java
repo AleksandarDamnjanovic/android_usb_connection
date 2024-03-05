@@ -79,7 +79,7 @@ public class CableTester extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
-        textView.setText("");
+        //textView.setText("");
         boolean result= false;
         byte[] data;
         String value= "";
@@ -118,7 +118,7 @@ public class CableTester extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.textView);
+        //textView = findViewById(R.id.textView);
         sendButton = findViewById(R.id.send);
         sendText = findViewById(R.id.sendText);
 

@@ -1,3 +1,8 @@
+/**
+ * Done by Aleksandar Damnjanovic aka Kind Spirit from Kind Spirit Technology YouTube Channel
+ * February 25. 2024.
+ */
+
 package com.example.usb_connection;
 
 import android.app.PendingIntent;
@@ -25,20 +30,24 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ This is base example of this project. It holds code for basic communication between esp microcontroller and
+ android app.
+ */
+public class BaseExample extends AppCompatActivity {
 
     private TextView textView;
     private EditText sendText;
     private Button sendButton;
 
-    static UsbDeviceConnection connection;
-    static List<UsbSerialDriver> availableDrivers;
-    static UsbSerialDriver driver;
-    static UsbSerialPort port;
-    static UsbManager manager;
-    static Map<String, UsbDevice> devices;
-    static UsbDevice device= null;
-    static PendingIntent pi;
+    private static UsbDeviceConnection connection;
+    private static List<UsbSerialDriver> availableDrivers;
+    private static UsbSerialDriver driver;
+    private static UsbSerialPort port;
+    private static UsbManager manager;
+    private static Map<String, UsbDevice> devices;
+    private static UsbDevice device= null;
+    private static PendingIntent pi;
     private boolean running= false;
     private static Object porting= new Object();
     private static String ACTION_USB_PERMISSION= "com.android.example.USB_PERMISSION";
@@ -122,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.textView);
+        //textView = findViewById(R.id.textView);
         sendButton = findViewById(R.id.send);
         sendText = findViewById(R.id.sendText);
 
